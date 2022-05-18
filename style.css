@@ -1,0 +1,50 @@
+body{
+    background-color: rgba(78, 75, 72, 0.74);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 480px;
+    font-family: sans-serif;
+    margin: 0 auto;
+    
+}
+
+.inicio{
+    display: block;
+
+}
+
+ul{
+    list-style: none;
+}
+
+#menu li>a{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+}
+
+#menu li>a:hover{
+    color: black;
+    background-color: #eaeaea;
+  }
+
+#menu>li{
+    float: left;
+    text-align:center
+  }
+
+section{
+    display: flex;
+    padding:60px; 
+    width:480px;
+    background-color: aqua;
+    justify-content: right;
+}
