@@ -1,9 +1,6 @@
 alert(
   "Recuerde que ahora se le pedira la cantidad que desea comprar y esta no puede sobrepasar la cantidad de 10"
 );
-let CantidadProducto = prompt("Ingrese la cantidad que desee comprar: ");
-//Bucle de cantidad * 10
-
 for (let i = 10; i <= 100; i += 10) {
   if (CantidadProducto <= 10) {
     alert(
@@ -20,14 +17,15 @@ for (let i = 10; i <= 100; i += 10) {
     continue;
 }
 }
-// variable para validar el bucle while 
+// Variable para validar el bucle while 
 let validar = true
 
-// bucle con validador para evitar generar un string vacio o null 
+// Bucle con validador para evitar generar un string vacio o null 
 
 while (validar) {
 
-  // si ejecuto el prompt por fuera del ciclo, el scope no lo registra y no genera un bucle, por eso  
+  // Si ejecuto el prompt por fuera del ciclo, el scope no lo registra y no genera un bucle, por eso  
+  
   let Localidad = prompt("Ingrese su localidad: ")
 
   if (CantidadProducto == 1 && isNaN(Localidad) && Localidad.length > 2) {
