@@ -6,14 +6,33 @@ let opciones = prompt(
 ).toLowerCase();
 let relleno;
 let Validar = true;
+
+//Agregado de arrays
 const tortas = ["bizcochuelo de chocolate", "bizcochuelo de vainilla"];
 const sabores = ["nutella", "dulce de leche"];
 const carrito = [];
 let suma = 0;
 
-//llamado de funcion para el inicio de la operacion
+//Agregado de clase constructora con arrays
+class productos{
+
+  constructor(tortas){
+    this.tortas = tortas
+  }
+    ChoiceT(){
+      alert(`Usted selecciono el ${this.tortas}`);
+    }
+}
+
+//Agregando objetos
+let BizChoco = new productos (tortas[0])
+let BizVaini = new productos(tortas[1])
+
+
+//Llamado de funcion para el inicio de la operacion
 inicio();
 
+//Canasta de Pago
 function comprar() {
   for (let i = 0; i < carrito.length; i++) {
     suma += carrito[i];
@@ -30,15 +49,15 @@ function comprar() {
   }
 }
 
-//Seleccion de opciones + seleccion de sabor
+//Seleccion de opciones 
 function inicio() {
   while (Validar) {
-    if (opciones == tortas[0]) {
-      alert(`Usted selecciono el ${tortas[0]}`);
+    if (opciones == BizChoco.tortas) {
+      BizChoco.ChoiceT();
       Sabor(relleno);
       break;
-    } else if (opciones == tortas[1]) {
-      alert(`Usted selecciono el ${tortas[1]}`);
+    } else if (opciones == BizVaini.tortas) {
+      BizVaini.ChoiceT();
       Sabor(relleno);
       break;
     } else {
@@ -50,14 +69,16 @@ function inicio() {
   }
 }
 
+//Seleccion de sabor
+
 function Sabor(relleno) {
-  //Seleccion de sabor
+  
   relleno = prompt(
     '¿Quiere un relleno de "Dulce de leche", de "Nutella" o sin relleno ?'
   ).toLowerCase();
   if (sabores.includes(relleno)) {
     relleno = "con relleno de " + relleno;
-    alert(`Usted eligio ${opciones} ${relleno},`);
+     alert(`Usted eligio ${opciones} ${relleno},`);
     cantidadYLocalidad(relleno); // Llamado de funcion para continuar con el ciclo
   } else if (relleno == "sin relleno") {
     alert(`Usted eligio ${opciones} ${relleno}`);
@@ -68,9 +89,10 @@ function Sabor(relleno) {
     cantidadYLocalidad(relleno);
   }
 }
-//funcion con localidad, cantidad y carrito
+//funcion con localidad, cantidad y el llamado de la funcion de carrito
 function cantidadYLocalidad(relleno) {
   let CantidadProducto = prompt("Ingrese la cantidad que desee comprar (10 Un. max. por compra) : ");
+  
   //Bucle de cantidad * 10
 
   for (let i = 10; i <= 100; i += 10) {
@@ -85,13 +107,15 @@ function cantidadYLocalidad(relleno) {
           CantidadProducto * i +
           " + IVA "
       );
-      carrito.push(CantidadProducto * i); //push de cantidades al carrito
+      carrito.push(CantidadProducto * i); //Push de cantidades al array de carrito
       break;
     }
   }
+
   // Bucle con validador para evitar generar un string vacio o null
+
   while (Validar) {
-    // Si ejecuto el prompt por fuera del ciclo, el scope no lo registra y no genera un bucle, por eso
+    // Si ejecuto el prompt por fuera del ciclo, el scope no lo registra y no genera un bucle, por eso lo ingreso al while
 
     let Localidad = prompt("Ingrese su localidad: ");
 
