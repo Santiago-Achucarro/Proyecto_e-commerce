@@ -1,3 +1,4 @@
+
 alert(
   "Recuerde que ahora se le pedira la cantidad que desea comprar y esta no puede sobrepasar la cantidad de 10"
 );

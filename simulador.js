@@ -1,4 +1,6 @@
-// Inicio
+
+  
+  // Inicio
 alert("Bienvenido/a a la Pasteleria ");
 
 let opciones = prompt(
@@ -14,7 +16,7 @@ const carrito = [];
 let suma = 0;
 
 //Agregado de clase constructora con arrays
-class productos{
+ class productos{
 
   constructor(tortas){
     this.tortas = tortas
@@ -52,11 +54,11 @@ function comprar() {
 //Seleccion de opciones 
 function inicio() {
   while (Validar) {
-    if (opciones == BizChoco.tortas) {
+    if (opciones == tortas[0]) {
       BizChoco.ChoiceT();
       Sabor(relleno);
       break;
-    } else if (opciones == BizVaini.tortas) {
+    } else if (opciones == tortas[1]) {
       BizVaini.ChoiceT();
       Sabor(relleno);
       break;
@@ -72,7 +74,7 @@ function inicio() {
 //Seleccion de sabor
 
 function Sabor(relleno) {
-  
+
   relleno = prompt(
     '¿Quiere un relleno de "Dulce de leche", de "Nutella" o sin relleno ?'
   ).toLowerCase();
@@ -95,12 +97,12 @@ function cantidadYLocalidad(relleno) {
   
   //Bucle de cantidad * 10
 
-  for (let i = 10; i <= 100; i += 10) {
+  for (let i = 10; i <= 10; i += 10) {
     if (CantidadProducto > 10 || isNaN(CantidadProducto)) {
       alert("Seleccione una cantidad permitida");
       CantidadProducto = prompt("Ingrese la cantidad que desee comprar: ");
     } else if (CantidadProducto <= 10) {
-      alert(
+      alert( 
         "Usted ingreso la cantidad de " +
           CantidadProducto +
           " la cual equivale a " +

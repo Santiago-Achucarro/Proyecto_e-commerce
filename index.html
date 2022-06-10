@@ -5,11 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eCommerce</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="simulador.js"></script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div .></div>
+    <div>
+        <h2>Productos Validos:</h2>
+        <ol>
+            <li>Bizcochuelo de vainilla (Cantidad Admitidad 10 Un.)</li>
+            <li>Bizcochuelo de chocolate (Cantidad Admitidad 10 Un.)</li>
+        </ol>
+        <br>
+    </div>
+    <form id="formulario">
+        <label for="text"> <strong>Productos:</strong> </label>
+        <input id="text" name="text"type="text">
+        <input type="number" name="cantidad" id="cantidad" min="1" max="10">
+        <button id="boton" type="submit">Comprar</button>
+    </form>
+    <ul id="lista">
+        <!--lista de la tienda-->
+        <br>
+        <h3>Carrito</h3>
+    </ul>
+    <script src="Events.js"></script>
 </body>
 </html>
