@@ -139,3 +139,11 @@ function cantidadYLocalidad(relleno) {
     }
   }
 }
+//                               IF       ELSE
+// operador ternario  condicion ? verdad : false 
+// tiene return implicito
+
+// operador or || hace la comparacion y toma el 2 valor del or (si el primer valor es un falsey, declara el segundo)
+// (si el primer valor es truthy, no genera el segundo valor)
+// falsey ==  false, undefined, null, 0 , " "
+// truthy == true,"false", "0", arrays vacios, objetos vacios, etc

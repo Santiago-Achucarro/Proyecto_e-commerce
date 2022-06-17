@@ -6,28 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eCommerce</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div>
-        <h2>Productos Validos:</h2>
-        <ol>
-            <li>Bizcochuelo de vainilla (Cantidad Admitidad 10 Un.)</li>
-            <li>Bizcochuelo de chocolate (Cantidad Admitidad 10 Un.)</li>
-        </ol>
-        <br>
-    </div>
-    <form id="formulario">
-        <label for="text"> <strong>Productos:</strong> </label>
-        <input id="text" name="text"type="text">
-        <input type="number" name="cantidad" id="cantidad" min="1" max="10">
-        <button id="boton" type="submit">Comprar</button>
-    </form>
-    <ul id="lista">
-        <!--lista de la tienda-->
-        <br>
+
+    <!-- HEADER -->
+    <header>
+        <div >
+            <h1 id="titulo"> Pasteleria Begging</h1>
+        </div>
+
+    </header>
+    <!-- HEADER -->
+
+    <hr>
+
+    <!-- PRODUCTOS -->
+
+    <section id="cards">
+        <div class="card">
+            <img src="public/images/TortaVainiOreo.jpg" alt="Cake" style="width:100%">
+            <h1>Cake</h1>
+                <p class="price">$200</p>
+            
+            <p><button class= "button" id="button1">Add to Cart</button></p>         
+        </div> 
+        
+        <div class="card">
+            <img src="public/images/TortaVainiOreo.jpg" alt="Cake" style="width:100%">
+            <h1>Cake 2</h1>
+                <p class="price">$250</p>
+            
+            <p><button class= "button" id="button2">Add to Cart</button></p>         
+        </div> 
+        <div class="card">
+            <img src="public/images/TortaVainiOreo.jpg" alt="Cake" style="width:100%">
+            <h1>Cake 3</h1>
+                <p class="price">$300</p>
+            
+            <p><button class= "button" id="button3">Add to Cart</button></p>         
+        </div> 
+    </section>
+     <!-- PRODUCTOS -->
+
+    <!-- LISTA DE CARRITO -->
+    <div >
         <h3>Carrito</h3>
-    </ul>
-    <script src="Events.js"></script>
+            <ul id="carrito">
+                    
+            </ul>
+
+            <ul id="carrito2">
+                    
+            </ul>
+
+            <ul id="carrito3">
+                    
+            </ul>
+
+            <ul id="total">
+                    
+            </ul>
+    </div>
+    <!-- LISTA DE CARRITO -->
+
+    <script src="script/Events.js"></script>
 </body>
 </html>
