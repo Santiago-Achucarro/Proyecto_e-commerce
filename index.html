@@ -5,22 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eCommerce</title>
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
 
     <!-- HEADER -->
+
     <header>
-        <div >
-            <h1 id="titulo"> Pasteleria Begging</h1>
-        </div>
+        <section class="nav" id="nav">
+        <h1 id="titulo"> Pasteleria The Beginning</h1>
+        <h3>Carrito</h3>
+        <div class="carritos"> 
+            <ul >
+                <li id="carrito"></li>
+                <li id="carrito2"></li>
+                <li id="carrito3"></li>    
+            </ul>
+        </div>   
+        </section>
 
     </header>
-    <!-- HEADER -->
-
+        
+        <!-- HEADER -->
+        
     <hr>
-
     <!-- PRODUCTOS -->
 
     <section id="cards">
@@ -49,27 +62,6 @@
     </section>
      <!-- PRODUCTOS -->
 
-    <!-- LISTA DE CARRITO -->
-    <div >
-        <h3>Carrito</h3>
-            <ul id="carrito">
-                    
-            </ul>
 
-            <ul id="carrito2">
-                    
-            </ul>
-
-            <ul id="carrito3">
-                    
-            </ul>
-
-            <ul id="total">
-                    
-            </ul>
-    </div>
-    <!-- LISTA DE CARRITO -->
-
-    <script src="script/Events.js"></script>
 </body>
 </html>
