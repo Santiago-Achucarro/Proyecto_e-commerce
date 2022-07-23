@@ -23,10 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let bton8 = document.getElementById("btn8");
   let bton9 = document.getElementById("btn9");
   
-  // VARIABLE DE LAS ETIQUETAS DEL HEADER PARA UTILIZAR LA ALERTA
-  let anchor = document.getElementById("anchor") 
-  let anchor2 = document.getElementById ("anchor2")
-  
+  // VARIABLE PARA LA SUMA DE ITEMS EN EL CART
+  let cart = document.getElementById("carrito")
+
   // VARIABLE DEL INPUT SEARCH 
   let buscador = document.getElementById("search");
   
@@ -102,15 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
  
 
 
-  function OneDay (e){
-    Swal.fire ({
-      icon:"error",
-      title: "Oops...",
-      text:"Proximamente...",
-      footer: 'En un Futuro no muy lejano',
-    })
-  }
-
+ 
+  
   // FUNCIONES DE SUMA DE CANTIDADES DEPENDIENTES DE CADA PRODUCTO CON SU RESPECTIVA VARIABLE Y VALOR DESIGNADO ANTERIORMENTE
   function SumCantidades(x) {
     if (x && unidades <= 9) {
@@ -318,7 +310,8 @@ document.addEventListener("DOMContentLoaded", () => {
       unidad.innerText = ` ${biz1.tortas} `;
       valores.innerText = ` $ ${precio} `;
       rest1.style.display = "block";
-      // bton1.disabled= false
+      cart.innerText = `${unidades}`
+      
     }
   }
   function Add2(e) {
@@ -496,6 +489,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   bton1.addEventListener("click", (e) => {
     Add1(e);
+  
   });
   rest1.addEventListener("click", (e) => {
     let cantidades = document.getElementById("cantidad");
@@ -506,6 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (unidades <= 0) {
     // RESET DE LOS INNER TEXT CREADOS POR EL BOTON CORRESPONDIENTE DE SUMA DE PRODUCTOS AL ALCANZAR LA CANTIDAD DE 0 UNIDADES
       rest1.style.display = "none";
+      cart.innerText = " "
       cantidades.innerText = ` `;
       unidad.innerText = `  `;
       valores.innerText = ` `;
@@ -514,6 +509,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cantidades.innerText = `${unidades} Un. `;
       unidad.innerText = ` ${biz1.tortas} `;
       valores.innerText = ` $ ${precio} `;
+      cart.innerText =  `${unidades}`
     }
   });
 
@@ -686,7 +682,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
  
-  // BOTON DE PROXIMAMENTE 
+ 
 
 
   // FILTRO/BUSCADOR DE PRODUCTOS POR STOCK, UNIDAD Y VALOR
@@ -702,7 +698,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
   })
+  
 
+  
+ // BOTON DE PROXIMAMENTE 
 
   anchor.addEventListener("click", (e) =>  {
     OneDay(e);
